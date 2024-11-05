@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Quiz</title>
+</head>
+<body>
+<div id="quiz-app">
+
+    <section class="center-card quiz-details" id="quiz-details">
+        <div class="quiz-details__question-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+              </svg>
+        </div>
+        <h2 class="quiz-details__title"></h2>
+        <p class="quiz-details__description"></p>
+        <div class="quiz-details__meta --qc">
+            <span>Question Count:</span><strong>--</strong>
+        </div>
+        <div class="quiz-details__meta --t">
+            <span>Time:</span><strong>--</strong>
+        </div>
+
+        <div class="quiz-details__start-btn-wrapper">
+            <button class="default-btn quiz-details__start-btn">
+                Start
+            </button>
+        </div>
+    </section>
+
+    <section class="center-card questions-card" id="questions-card">
+        <div class="questions-card__progress-wrapper">
+            <span class="questions-card__q-count">Question 0/0</span>
+            <span class="questions-card__remaining-time">00:00</span>
+            <div class="questions-card__progress"><span class="--value"></span></div>
+        </div>
+        <p class="questions-card__q-title" id="question-title" data-qn="Q 1:"></p>
+
+        <div class="question-card__options">
+            <div class="question-card__option __one">
+                <input type="radio" name="question-option" id="option-one" value="0"/>
+                <label class="question-card__option__value" for="option-one"></label>
+            </div>
+            <div class="question-card__option __two">
+                <input type="radio" name="question-option" id="option-two" value="1"/>
+                <label class="question-card__option__value"
+                       for="option-two"></label>
+            </div>
+            <div class="question-card__option __three">
+                <input type="radio" name="question-option" id="option-three" value="2"/>
+                <label class="question-card__option__value"
+                       for="option-three"></label>
+            </div>
+            <div class="question-card__option __four">
+                <input type="radio" name="question-option" id="option-four" value="3"/>
+                <label class="question-card__option__value"
+                       for="option-four"></label>
+            </div>
+        </div>
+
+        <div class="question-card-buttons">
+            <button class="default-btn question-card-buttons__stop"
+                    id="stop-btn">STOP
+            </button>
+            <button class="default-btn question-card-buttons__next"
+                    id="next-btn">NEXT
+            </button>
+        </div>
+    </section>
+
+    <section class="center-card result-card" id="result-card">
+        <h2 class="result-card__score" id="score">0</h2>
+        <strong class="result-card__score__lbl">Your Score</strong>
+
+        <div class="result-card-buttons">
+            <button class="default-btn" id="go-to-home">Go to Home</button>
+        </div>
+    </section>
+
+</div>
+<script type="text/javascript" src="quiz.js"></script>
+<script type="text/javascript" src="element-helper.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
